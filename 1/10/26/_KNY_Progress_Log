@@ -1,0 +1,17 @@
+console.log("hello");
+const roles = ["akaza", "tanjiro"];
+
+
+
+const akaza = {name:"akaza", stats:{health:1000,main:50,Super:100}};
+
+const tanjiro =  {name:"tanjiro", stats: 
+{health:800,main:60,Super:90}};
+
+let role = Math.floor(Math.random()*roles.length);
+console.log("your role is: "+ roles[role]);
+
+function attack(attacker, enemy){ enemy.stats.health = enemy.stats.health-attacker.stats.main; return console.log(attacker.name + " ATTACKS! " +enemy.name+" health has been reduced to "+ enemy.stats.health)}
+if(roles[role] === "akaza"){attack(akaza, tanjiro)};
+if(roles[role]==="tanjiro"){attack(tanjiro,akaza)};
+console.log("your role is: "+ roles[role]);
